@@ -1,0 +1,25 @@
+$yellow-primary: #daa520;
+$yellow-secondary: #f0e68c;
+
+.button {
+  border: 1px solid whitesmoke;
+  background-color: $yellow-primary;
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    background-color: $yellow-secondary;
+  }
+}
+
+.dark .button {
+  background-color: whitesmoke;
+
+  &:hover {
+    background-color: $yellow-secondary;
+  }
+}

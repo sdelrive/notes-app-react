@@ -1,0 +1,57 @@
+$border-gray: rgb(153, 153, 153);
+$input-gray: rgb(231, 231, 231);
+$background-inputs-dark: rgb(51, 51, 51);
+$gray-primary: rgb(89, 89, 89);
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  width: 80vw;
+  max-width: 300px;
+  input {
+    border-radius: 5px;
+    background-color: whitesmoke;
+
+    margin-top: 5px;
+    width: 50%;
+    height: 10px;
+
+    border: 1px solid $border-gray;
+    padding: 10px;
+
+    &:focus {
+      background-color: $input-gray;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 400px) {
+  .input {
+    input {
+      width: 80%;
+      height: 30px;
+    }
+  }
+}
+
+.dark {
+  .input {
+    input {
+      color: white;
+      background-color: $gray-primary;
+
+      &:focus {
+        background-color: $gray-primary;
+      }
+    }
+    p {
+      color: whitesmoke;
+    }
+  }
+}

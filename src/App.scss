@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap"); // $yellow-background: #f0e68c;
+$yellow-background: #fffdd0;
+$yellow-primary: #daa520;
+$yellow-secondary: #f0e68c;
+$dark-gray: #333333;
+$background-color-dark: rgb(34, 34, 34);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.app {
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+
+  background-color: $yellow-background;
+}
