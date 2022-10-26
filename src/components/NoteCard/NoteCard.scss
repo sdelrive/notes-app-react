@@ -1,5 +1,19 @@
 $yellow-primary: #daa520;
 
+.notes-config {
+  font-size: 20px;
+  margin-bottom: 0;
+
+  .trash-can,
+  .edit {
+    transition: 450ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: white;
+    }
+    margin-right: 25px;
+  }
+}
 .note-card {
   padding: 20px;
   padding-bottom: 0px;
@@ -7,9 +21,10 @@ $yellow-primary: #daa520;
   h2 {
     text-align: center;
   }
+  width: 250px;
+  // max-width: 200px;
+  height: 300px;
 
-  max-width: 200px;
-  height: 350px;
   max-height: 500px;
   background-color: $yellow-primary;
 }
@@ -18,14 +33,17 @@ $yellow-primary: #daa520;
   height: 10%;
 }
 .note-text {
-  height: 80%;
+  height: 70%;
   p {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 300;
   }
 }
 .note-date {
-  height: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
   p {
     display: flex;
     justify-content: flex-end;
