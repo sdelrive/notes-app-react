@@ -1,0 +1,80 @@
+.layoutContainer {
+  width: 100%;
+  min-height: 100vh; //   display: flex;
+  //   border: 1px red solid;
+
+  .sidebar {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.39);
+  }
+  .main {
+    margin: 0 10%;
+    display: flex;
+    justify-content: center; // height: 100%;
+  }
+}
+
+@media (min-width: 675px) {
+  .layoutContainer {
+    display: flex;
+    width: 100%;
+
+    .sidebar {
+      width: 360px;
+      height: auto;
+
+      .input {
+        z-index: 3;
+        color: white;
+      }
+      .search {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+      }
+      .user {
+        margin: auto;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.382);
+        width: 50%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+        margin-top: 30px;
+
+        &-menu span {
+          height: 3px;
+          width: 10px;
+          background-color: black;
+        }
+      }
+      .logout {
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 30px;
+        padding-bottom: 30px;
+        opacity: 1;
+        color: black;
+        height: 10%;
+
+        p {
+          cursor: pointer;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}
+.span {
+  height: 3px;
+  width: 10px;
+  background-color: black;
+}

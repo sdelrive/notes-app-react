@@ -4,7 +4,10 @@ import "./AddForm.scss";
 import { useState, useEffect } from "react";
 import Button from "../Button/Button";
 import Input from "../Input/Input";
-export default function AddForm({ open, setOpen, notes, setNotes }) {
+import { useSelector } from "react-redux";
+import { openModal } from "../../store/ui/modalSlice";
+export default function AddForm({ open, setOpen, notes, setNotes, contenido }) {
+  const editNote = useSelector((state) => state.modal.value);
   const [note, setNote] = useState("");
 
   if (!open) {
@@ -36,6 +39,7 @@ export default function AddForm({ open, setOpen, notes, setNotes }) {
       <div className="add-form">
         <label htmlFor="newNote">Nueva nota</label>
         <textarea
+          defaultValue={contenido}
           onChange={handleNoteForm}
           id="newNote"
           name="newNote"
@@ -47,3 +51,6 @@ export default function AddForm({ open, setOpen, notes, setNotes }) {
     </>
   );
 }
+
+// Para el elemento de edicion, deberia hacer otro reducer para el caso en que quiera editar, no agregar una nueva, y cargar
+// el contenido de la nota al formulario modal.
